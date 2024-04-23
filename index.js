@@ -1,5 +1,6 @@
-// Runs the application using imports from lib
-// fs is a Node standard library package for reading and writing files
+// import fs a standary lib pacjage for reading and writing files 
+// import inquirer  from prompting the user for input 
+//import circle, triangle and square classes from shapes.js file 
 const fs = require("fs");
 const inquirer = require("inquirer");
 const { Circle, Triangle, Square } = require("./lib/shapes");
@@ -12,19 +13,19 @@ inquirer
       message: "please select from the following shapes: ",
       choices: ["Circle", "Triangle", "Square"],
     },
-    // text color
+    // text color prompt
     {
       type: "input",
       name: "textColor",
       message: "please input text color",
     },
-    //shape color
+    //shape color prompt
     {
       type: "input",
       name: "shapeColor",
       message: "please input shape color",
     },
-    //text
+    //text prompt
     {
       type: "input",
       name: "text",
@@ -32,6 +33,8 @@ inquirer
       message: "please input text",
     },
   ])
+
+  //It conditionally creates an instance of the selected shape class based on the user's choice."
   .then((answers) => {
     let shape;
     if (answers.shape === "Circle") {
@@ -41,7 +44,7 @@ inquirer
     } else {
         shape = new Square(answers.shapeColor, answers.textColor, answers.text);
     }
-
+    // writes the SVG logo of the shape to a file named logo.svg 
     fs.writeFile("logo.svg", shape.render(), (err, result) => {
       if (err) throw err;
       console.log("svg created");
