@@ -16,7 +16,8 @@ to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
-## License
+## Link to Video Walk Through 
+https://drive.google.com/file/d/1m408E30s37FBlqJhlJ--yqvoK2kOw2wv/view?usp=sharing
 
 ## Notes 
 Student received suppor from tutor on starting the project and building the index.js file and the shapes.js file. Student utilized projects from module 10 to support with the rest of the challenge. 
