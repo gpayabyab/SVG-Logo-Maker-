@@ -41,8 +41,8 @@ inquirer
       shape = new Circle(answers.shapeColor, answers.textColor, answers.text);
     } else if (answers.shape === "Triangle") {
       shape = new Triangle(answers.shapeColor, answers.textColor, answers.text);
-    } else {
-        shape = new Square(answers.shapeColor, answers.textColor, answers.text);
+    } else (answers.shape === "Square") ;{
+      shape = new Square(answers.shapeColor, answers.textColor, answers.text);
     }
     // writes the SVG logo of the shape to a file named logo.svg 
     fs.writeFile("logo.svg", shape.render(), (err, result) => {
